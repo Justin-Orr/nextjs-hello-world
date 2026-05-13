@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <div id="app"></div>
+        <script type="text/javascript">
+            // Select the div element with 'app' id
+            const app = document.getElementById('app');
+
+            // Create a new H1 element
+            const header = document.createElement('h1');
+
+            // Create a new text node for the H1 element
+            const text = 'Develop. Preview. Ship.';
+            const headerContent = document.createTextNode(text);
+
+            // Append the text to the H1 element
+            header.appendChild(headerContent);
+ 
+            // Place the H1 element inside the div
+            app.appendChild(header);
+
+            /* If you look at the DOM elements inside your browser developer tools, 
+            you will notice the DOM includes the <h1> element. The DOM of the page 
+            is different from the source code - or in other words, the original HTML
+            file you created.
+            
+            This is because the HTML represents the initial page content, whereas the 
+            DOM represents the updated page content which was changed by the JavaScript 
+            code you wrote. */
+        </script>
+    </body>
+</html>
