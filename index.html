@@ -1,12 +1,12 @@
 <html>
     <body>
         <div id="app"></div>
-        <script src="https://unpkg.com/react@18/umd/react.development.js"></script> <!-- core react library -->
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> <!-- provides DOM-specific methods that enable you to use React with the DOM. -->
-        <script>
-            // Select the div element with 'app' id
-            const app = document.getElementById('app');
-            const root = ReactDOM.createRoot(app);
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script> <!-- Core React library -->
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> <!-- React-dom provides DOM-specific methods that enable you to use React with the DOM. -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- Babel for JSX support -->
+        <script type="text/jsx">
+            const domNode = document.getElementById('app');
+            const root = ReactDOM.createRoot(domNode);
             root.render(<h1>Develop. Preview. Ship.</h1>);
         </script>
     </body>
