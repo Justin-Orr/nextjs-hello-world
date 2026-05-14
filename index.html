@@ -1,31 +1,13 @@
 <html>
     <body>
         <div id="app"></div>
-        <script type="text/javascript">
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script> <!-- core react library -->
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> <!-- provides DOM-specific methods that enable you to use React with the DOM. -->
+        <script>
             // Select the div element with 'app' id
             const app = document.getElementById('app');
-
-            // Create a new H1 element
-            const header = document.createElement('h1');
-
-            // Create a new text node for the H1 element
-            const text = 'Develop. Preview. Ship.';
-            const headerContent = document.createTextNode(text);
-
-            // Append the text to the H1 element
-            header.appendChild(headerContent);
- 
-            // Place the H1 element inside the div
-            app.appendChild(header);
-
-            /* If you look at the DOM elements inside your browser developer tools, 
-            you will notice the DOM includes the <h1> element. The DOM of the page 
-            is different from the source code - or in other words, the original HTML
-            file you created.
-            
-            This is because the HTML represents the initial page content, whereas the 
-            DOM represents the updated page content which was changed by the JavaScript 
-            code you wrote. */
+            const root = ReactDOM.createRoot(app);
+            root.render(<h1>Develop. Preview. Ship.</h1>);
         </script>
     </body>
 </html>
