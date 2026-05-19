@@ -9,16 +9,30 @@
             const domNode = document.getElementById('app');
             
             // New react component
-            function Header() {
-                return <h1>Develop. Preview. Ship.</h1>;
+            function Header({title}) {
+                return <h1>{title}</h1>;
             }
 
             function HomePage() {
+                const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+                
+                // Passing data diretly using props (mutable properties)
                 return (
                     <div>
-                        <Header />
+                        <div>
+                            <Header title="React"/> 
+                            <Header title="A new title"/> 
+                        </div>
+                        <div>
+                            <Header title="Develop. Previeew. Ship"/>
+                            <ul>
+                                {names.map( (name) => (<li key={name}> {name} </li>))}         
+                            </ul>
+                        </div>
                     </div>
                 );
+                // Reminder: The key in the list item generally should be a unique identifier. 
+                // This example uses the name since all names in the list are different.
             }
 
             const root = ReactDOM.createRoot(domNode);
